@@ -219,7 +219,7 @@
 
         .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
@@ -240,29 +240,31 @@
         .card h4 {
             font-size: 22px;
             color: var(--primary-green);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .card ul {
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        .card ul li {
-            padding: 8px 0;
+        /* Tối ưu danh sách để chữ không bị ngắt dòng thô */
+        .info-item {
+            padding: 12px 0;
             border-bottom: 1px dashed #eee;
-            font-size: 15px;
+            font-size: 14.5px;
             color: #444;
             display: flex;
-            align-items: center;
-            gap: 10px;
+            gap: 12px;
+            align-items: flex-start;
         }
 
-        .card ul li i {
-            color: var(--accent-orange);
+        .info-item strong {
+            min-width: 85px;
+            color: var(--primary-green);
+            flex-shrink: 0;
+        }
+
+        .info-item span {
+            flex-grow: 1;
         }
 
         .facility-banner {
@@ -445,3 +447,63 @@
         .social-links {
             display: flex;
             gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-orange);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        🔥 ĐĂNG KÝ NGAY HÔM NAY – MIỄN PHÍ HỌC THỬ 1 BUỔI! | HOTLINE: 0981 473 028 - 0944 069 936
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Trung Tâm Cầu Lông Linh Đàm">
+            <div class="logo-text">
+                <h1>Cầu Lông Linh Đàm</h1>
+                <p>HỌC CẦU LÔNG - HỌC KỸ NĂNG - HỌC CHIẾN THẮNG</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#coso">Hệ thống sân</a></li>
+                <li><a href="#khoahoc">Khóa học</a></li>
+                <li><a href="#giaidau">Giải đấu 2026</a></li>
+                <li><a href="#datlich">Đăng ký lịch tập</a></li>
+                <li><a href="https://zalo.me/0981473028" target="_blank" class="btn-cta"><i class="fa-solid fa-phone"></i> Liên hệ Zalo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-badge">Chuyên nghiệp & Tận tâm</div>
+        <h2>Trung Tâm Cầu Lông Linh Đàm</h2>
+        <p>Đào tạo từ cơ bản đến nâng cao, chuyên luyện đánh giải và nâng cao trình độ. Đội ngũ HLV tận tâm, cơ sở vật chất hiện đại, lịch tập linh hoạt theo yêu cầu học viên!</p>
+        <div class="hero-buttons">
+            <a href="#datlich" class="btn-main"><i class="fa-solid fa-calendar-check"></i> Đăng Ký Lịch Tập Ngay</a>
+            <a href="
