@@ -260,7 +260,7 @@
             margin-top: 4px;
         }
 
-        /* --- PHẦN TAB CHƯƠNG TRÌNH ĐÀO TẠO MỚI --- */
+        /* --- PHẦN TAB CHƯƠNG TRÌNH ĐÀO TẠO MỚI (TỐI ƯU BỐ CỤC) --- */
         .training-section {
             background: var(--white);
             border-radius: 20px;
@@ -302,8 +302,8 @@
 
         .tab-content {
             display: none;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 30px;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 35px;
             align-items: start;
             animation: fadeIn 0.4s ease-in-out;
         }
@@ -320,51 +320,64 @@
         .tab-info h4 {
             font-size: 24px;
             color: var(--primary-green);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 800;
         }
 
         .tab-info p {
             color: #555;
             font-size: 14px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             line-height: 1.6;
         }
 
-        .tab-info ul {
-            list-style: none;
-            margin-bottom: 15px;
+        /* Định dạng khối nội dung thông thoáng, không bị bó hẹp grid */
+        .content-block {
+            margin-bottom: 16px;
         }
 
-        .tab-info ul li {
-            padding: 5px 0;
+        .content-block .sub-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--accent-orange);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-transform: uppercase;
+        }
+
+        .content-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-block ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
             font-size: 14px;
             color: #444;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            line-height: 1.5;
         }
 
-        .tab-info ul li i {
+        .content-block ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
             color: var(--accent-orange);
-            margin-top: 4px;
-        }
-
-        .sub-heading {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--accent-orange);
-            margin: 12px 0 6px 0;
-            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+            top: 1px;
         }
 
         /* Nút liên hệ giá học cho từng tab */
         .price-contact-box {
             background: #e8f5e9;
             border-left: 4px solid var(--primary-green);
-            padding: 12px 15px;
+            padding: 12px 16px;
             border-radius: 8px;
-            margin-top: 15px;
+            margin-top: 18px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -381,7 +394,7 @@
         .btn-price-contact {
             background: var(--accent-orange);
             color: var(--white);
-            padding: 6px 14px;
+            padding: 7px 16px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 700;
@@ -389,7 +402,7 @@
             transition: 0.3s;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
 
         .btn-price-contact:hover {
@@ -398,11 +411,11 @@
 
         .tab-img img {
             width: 100%;
-            height: 250px;
+            height: 240px;
             object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         /* 5 Ảnh dành riêng cho Lớp chuyên sâu */
@@ -410,7 +423,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .expert-gallery img {
@@ -756,11 +769,13 @@
                 <div class="tab-info">
                     <h4>Lớp Cơ Bản</h4>
                     <p>Dành cho người mới bắt đầu hoặc muốn xây dựng lại nền tảng kỹ thuật động tác chuẩn xác từ những bước di chuyển đầu tiên.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Làm quen với cách cầm vợt chuẩn xác</li>
-                        <li><i class="fa-solid fa-check"></i> Học các động tác cơ bản: phát cầu, bỏ nhỏ, phông cầu</li>
-                        <li><i class="fa-solid fa-check"></i> Rèn luyện bộ pháp di chuyển cơ bản trên sân</li>
-                    </ul>
+                    <div class="content-block">
+                        <ul>
+                            <li>Làm quen với cách cầm vợt chuẩn xác</li>
+                            <li>Học các động tác cơ bản: phát cầu, bỏ nhỏ, phông cầu</li>
+                            <li>Rèn luyện bộ pháp di chuyển cơ bản trên sân</li>
+                        </ul>
+                    </div>
                     <div class="price-contact-box">
                         <span>💬 Quan tâm học phí lớp Cơ Bản?</span>
                         <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
@@ -776,11 +791,13 @@
                 <div class="tab-info">
                     <h4>Lớp Nâng Cao</h4>
                     <p>Hoàn thiện toàn diện kỹ thuật và thể lực. Trang bị thêm các bài tập bổ trợ giúp tăng tốc độ phản xạ để học viên có nền tảng vững chắc thi đấu.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Hoàn thiện các kỹ thuật khó và nâng cao tốc độ vung vợt</li>
-                        <li><i class="fa-solid fa-check"></i> Đẩy mạnh thể lực chuyên sâu cho cầu lông</li>
-                        <li><i class="fa-solid fa-check"></i> Bài tập bổ trợ tăng tốc độ phản xạ nhanh nhạy trên sân</li>
-                    </ul>
+                    <div class="content-block">
+                        <ul>
+                            <li>Hoàn thiện các kỹ thuật khó và nâng cao tốc độ vung vợt</li>
+                            <li>Đẩy mạnh thể lực chuyên sâu cho cầu lông</li>
+                            <li>Bài tập bổ trợ tăng tốc độ phản xạ nhanh nhạy trên sân</li>
+                        </ul>
+                    </div>
                     <div class="price-contact-box">
                         <span>💬 Quan tâm học phí lớp Nâng Cao?</span>
                         <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
@@ -791,25 +808,29 @@
                 </div>
             </div>
 
-            <!-- Tab 3: Chuyên Sâu (ĐÃ CẬP NHẬT: XÓA GIÁ, TẬP TRUNG QUY MÔ, ĐẦU VÀO, YÊU CẦU & ĐỊNH HƯỚNG) -->
+            <!-- Tab 3: Chuyên Sâu (ĐÃ CẬP NHẬT BỐ CỤC SẠCH SẼ, THOÁNG MÁT) -->
             <div id="chuyensau" class="tab-content">
                 <div class="tab-info">
                     <h4>Lớp Cầu Lông Chuyên Sâu (HLV Trưởng Trực Tiếp Đứng Lớp)</h4>
-                    <p><strong>Triết lý đào tạo:</strong> <em>"Không chỉ dạy đánh cầu, mà đào tạo học viên biết tập luyện, biết thi đấu và hướng tới các giải đấu lớn."</em></p>
+                    <p><strong>Mục tiêu đào tạo:</strong> Lớp chuyên sâu được xây dựng dành cho những học viên có mong muốn tiến bộ rõ rệt về thể lực, kỹ thuật và chiến thuật, hướng tới việc có thể tham gia các giải đấu cầu lông.</p>
                     
-                    <div class="sub-heading">I. Mô Hình & Yêu Cầu Đầu Vào</div>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> <strong>Quy mô tối ưu:</strong> 05 – 06 học viên/lớp để đảm bảo chất lượng theo sát từng cá nhân.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Kiểm tra đầu vào:</strong> Học viên phải qua kiểm tra và phân loại trình độ khắt khe trước khi xếp lớp.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Thời gian biểu:</strong> 15h30 – 17h30 (Thời lượng: 120 phút/buổi, kết hợp 60 phút thể lực chuyên môn và 60 phút kỹ chiến thuật thực chiến).</li>
-                    </ul>
+                    <div class="content-block">
+                        <div class="sub-title"><i class="fa-solid fa-circle-chevron-right"></i> I. Mô Hình & Yêu Cầu Đầu Vào</div>
+                        <ul>
+                            <li><strong>Quy mô tối ưu:</strong> 05 – 06 học viên/lớp để đảm bảo chất lượng theo sát từng cá nhân.</li>
+                            <li><strong>Kiểm tra đầu vào:</strong> Học viên phải qua kiểm tra và phân loại trình độ khắt khe trước khi xếp lớp.</li>
+                            <li><strong>Thời gian biểu:</strong> 15h30 – 17h30 (Thời lượng: 120 phút/buổi, kết hợp 60 phút thể lực chuyên môn và 60 phút kỹ chiến thuật thực chiến).</li>
+                        </ul>
+                    </div>
 
-                    <div class="sub-heading">II. Định Hướng & Đồng Hành Thi Đấu</div>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Xây dựng chiến thuật chuyên sâu theo nội dung đăng ký (Đơn Nam/Nữ, Đôi Nam/Nữ/Nam-Nữ).</li>
-                        <li><i class="fa-solid fa-check"></i> Đánh giá tiến bộ qua phiếu theo dõi cá nhân và kiểm tra cuối khóa.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Đặc quyền:</strong> Được Trung tâm định hướng, đăng ký tham gia các giải đấu lớn và <strong>được HLV trưởng trực tiếp đi cùng, hỗ trợ chiến thuật</strong> khi thi đấu.</li>
-                    </ul>
+                    <div class="content-block">
+                        <div class="sub-title"><i class="fa-solid fa-circle-chevron-right"></i> II. Định Hướng & Đồng Hành Thi Đấu</div>
+                        <ul>
+                            <li>Xây dựng chiến thuật chuyên sâu theo nội dung đăng ký (Đơn Nam/Nữ, Đôi Nam/Nữ/Nam-Nữ).</li>
+                            <li>Đánh giá tiến bộ qua phiếu theo dõi cá nhân và kiểm tra cuối khóa.</li>
+                            <li><strong>Đặc quyền:</strong> Được Trung tâm định hướng, đăng ký tham gia các giải đấu lớn và được HLV trưởng trực tiếp đi cùng, hỗ trợ chiến thuật khi thi đấu.</li>
+                        </ul>
+                    </div>
 
                     <div class="price-contact-box">
                         <span>💬 Quan tâm chi phí & lịch tập lớp Chuyên Sâu?</span>
@@ -835,11 +856,13 @@
                 <div class="tab-info">
                     <h4>Lớp Cá Nhân (1-1, 1-2, 1-3, 1-4) – HLV Dạy Riêng Theo Giờ</h4>
                     <p>Hình thức học được thiết kế linh hoạt tuyệt đối cho cá nhân hoặc nhóm nhỏ theo giờ giấc và mong muốn riêng của học viên.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> <strong>Hình thức học:</strong> Nhận dạy riêng 1-1, 1-2, 1-3 hoặc nhóm nhỏ 1-4 theo lịch rảnh của học viên.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Giáo án độc quyền:</strong> Thầy giáo trực tiếp giảng dạy và thiết kế giáo án riêng biệt nhằm bổ túc chính xác thể lực hay kỹ thuật còn thiếu sót.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Yêu cầu riêng:</strong> Học viên được quyền yêu cầu HLV tập trung dạy các kỹ thuật hoặc chiến thuật theo ý muốn cá nhân.</li>
-                    </ul>
+                    <div class="content-block">
+                        <ul>
+                            <li><strong>Hình thức học:</strong> Nhận dạy riêng 1-1, 1-2, 1-3 hoặc nhóm nhỏ 1-4 theo lịch rảnh của học viên.</li>
+                            <li><strong>Giáo án độc quyền:</strong> Thầy giáo trực tiếp giảng dạy và thiết kế giáo án riêng biệt nhằm bổ túc chính xác thể lực hay kỹ thuật còn thiếu sót.</li>
+                            <li><strong>Yêu cầu riêng:</strong> Học viên được quyền yêu cầu HLV tập trung dạy các kỹ thuật hoặc chiến thuật theo ý muốn cá nhân.</li>
+                        </ul>
+                    </div>
                     <div class="price-contact-box">
                         <span>💬 Quan tâm học phí lớp Cá Nhân / 1 kèm 1?</span>
                         <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
