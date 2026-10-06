@@ -246,17 +246,38 @@
         }
 
         .card ul li {
-            padding: 7px 0;
+            padding: 8px 0;
             border-bottom: 1px dashed #eee;
             font-size: 14px;
             color: #444;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 10px;
         }
 
         .card ul li i {
             color: var(--accent-orange);
+            margin-top: 4px;
+        }
+
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #e8f5e9;
+            color: var(--primary-green);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 4px;
+            transition: 0.3s;
+        }
+
+        .map-link:hover {
+            background: var(--primary-green);
+            color: var(--white);
         }
 
         .facility-banner {
@@ -460,7 +481,7 @@
 <body>
 
     <div class="top-bar">
-        🔥 ĐĂNG KÝ NGAY HÔM NAY – MIỄN PHÍ HỌC THỬ 1 BUỔI! | HOTLINE: 0981 473 028 - 0944 069 936
+        🔥 ĐĂNG KÝ NGAY HÔM NAY – MIỄN PHÍ HỌC THỬ! | HOTLINE: 0981 473 028 - 0944 069 936
     </div>
 
     <header>
@@ -503,9 +524,21 @@
             <div class="card">
                 <h4><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Địa Điểm Sân Tập</h4>
                 <ul>
-                    <li><strong>Cơ sở 1:</strong> Sân cầu lông Đại Thanh (Số đường Phan Trọng Tuệ / 63 đối diện KĐT Đại Thanh, Hà Nội).</li>
-                    <li><strong>Cơ sở 2:</strong> Sân cầu lông Ngọc Văn (948 Quang Trung, Yên Nghĩa, Hà Nội).</li>
-                    <li><i class="fa-solid fa-check"></i> Sân thảm tiêu chuẩn, thoáng mát, ánh sáng chuẩn thi đấu.</li>
+                    <li>
+                        <i class="fa-solid fa-map-pin"></i>
+                        <div>
+                            <strong>Cơ sở 1:</strong> Sân cầu lông Đại Thanh (Số đường Phan Trọng Tuệ / 63 đối diện KĐT Đại Thanh, Hà Nội).<br>
+                            <a href="https://maps.app.goo.gl/JFTjGEadPPQGKvrE8" target="_blank" class="map-link"><i class="fa-solid fa-route"></i> Xem đường đi Google Maps</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-map-pin"></i>
+                        <div>
+                            <strong>Cơ sở 2:</strong> Sân cầu lông Ngọc Vân (948 Quang Trung, Yên Nghĩa, Hà Nội).<br>
+                            <a href="https://maps.app.goo.gl/zvnaJq1NNevaxzfL6" target="_blank" class="map-link"><i class="fa-solid fa-route"></i> Xem đường đi Google Maps</a>
+                        </div>
+                    </li>
+                    <li><i class="fa-solid fa-check" style="color: var(--accent-orange);"></i> <span>Sân thảm tiêu chuẩn, thoáng mát, ánh sáng chuẩn thi đấu.</span></li>
                 </ul>
             </div>
 
@@ -550,7 +583,7 @@
 
         <div id="datlich" class="booking-section">
             <h3>Đăng Ký Lớp Học & Đặt Lịch Tập Trực Tuyến</h3>
-            <p>Điền thông tin của bạn bên dưới, trung tâm sẽ liên hệ xác nhận lịch tập và giữ chỗ miễn phí 1 buổi học thử!</p>
+            <p>Điền thông tin của bạn bên dưới, trung tâm sẽ liên hệ xác nhận lịch tập và giữ chỗ miễn phí học thử!</p>
             
             <form class="booking-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký! Trung tâm Cầu Lông Linh Đàm đã nhận thông tin và sẽ liên hệ lại qua Zalo/SĐT cho bạn ngay lập tức.');">
                 <div>
@@ -563,7 +596,7 @@
                     <select required>
                         <option value="">-- Chọn cơ sở tập luyện --</option>
                         <option value="cs1">Cơ sở 1: Sân Đại Thanh (Phan Trọng Tuệ)</option>
-                        <option value="cs2">Cơ sở 2: Sân Ngọc Văn (Quang Trung, Yên Nghĩa)</option>
+                        <option value="cs2">Cơ sở 2: Sân Ngọc Vân (Quang Trung, Yên Nghĩa)</option>
                     </select>
                 </div>
                 <div>
@@ -573,7 +606,7 @@
                         <option value="nangcao">Lớp Nâng Cao & Đánh Giải</option>
                         <option value="nhom">Học theo nhóm riêng</option>
                         <option value="hoc11">Học 1-1 (Huấn luyện viên riêng)</option>
-                        <option value="hocthu">Đăng ký học thử 1 buổi miễn phí</option>
+                        <option value="hocthu">Đăng ký miễn phí học thử</option>
                     </select>
                 </div>
                 
@@ -605,7 +638,7 @@
             </div>
             <div class="footer-col">
                 <h5>Hệ Thống Cơ Sở</h5>
-                <p><i class="fa-solid fa-location-dot"></i> CS1: Sân Cầu Lông Đại Thanh, Phan Trọng Tuệ, Hà Nội</p>
+                <p><i class="fa-solid fa-location-dot"></i> CS1: Sân Đại Thanh, Phan Trọng Tuệ, Hà Nội</p>
                 <p><i class="fa-solid fa-location-dot"></i> CS2: 948 Quang Trung, Yên Nghĩa, Hà Nội</p>
             </div>
             <div class="footer-col">
