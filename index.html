@@ -246,4 +246,461 @@
         }
 
         .card ul li {
-            padding:
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 14px;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .card ul li i {
+            color: var(--accent-orange);
+            margin-top: 4px;
+        }
+
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #e8f5e9;
+            color: var(--primary-green);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 4px;
+            transition: 0.3s;
+        }
+
+        .map-link:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .facility-banner {
+            margin-top: 35px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .facility-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 450px;
+            object-fit: cover;
+        }
+
+        .tournament-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+            margin-top: 35px;
+            border-left: 6px solid var(--accent-yellow);
+        }
+
+        .tournament-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .tournament-grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none;
+            }
+        }
+
+        .tournament-info h4 {
+            font-size: 24px;
+            color: var(--primary-green);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .tournament-info p {
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            max-height: 380px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .booking-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: var(--white);
+            border-radius: 20px;
+            padding: 45px 30px;
+            margin-top: 45px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(11, 107, 58, 0.2);
+        }
+
+        .booking-section h3 {
+            font-size: 28px;
+            color: var(--accent-yellow);
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .booking-form {
+            max-width: 650px;
+            margin: 25px auto 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .booking-form input, .booking-form select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .booking-form .full-width {
+            grid-column: span 2;
+        }
+
+        #khuVucGroup {
+            display: none;
+        }
+
+        .btn-submit {
+            background: var(--accent-orange);
+            color: var(--white);
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #d45b15;
+        }
+
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 45px 20px 20px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .footer-col h5 {
+            font-size: 16px;
+            color: var(--accent-yellow);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #bbb;
+            font-size: 13px;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .social-links a {
+            background: rgba(255,255,255,0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 16px;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-orange);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        🔥 ĐĂNG KÝ NGAY HÔM NAY – MIỄN PHÍ HỌC THỬ! | HOTLINE: 0981 473 028 - 0944 069 936
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Trung Tâm">
+            <div class="logo-text">
+                <h1>Cầu Lông Linh Đàm</h1>
+                <p>HỌC CẦU LÔNG - HỌC KỸ NĂNG - HỌC CHIẾN THẮNG</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#coso">Hệ thống sân</a></li>
+                <li><a href="#khoahoc">Khóa học</a></li>
+                <li><a href="#giaidau">Giải đấu 2026</a></li>
+                <li><a href="#datlich">Đăng ký lịch tập</a></li>
+                <li><a href="https://zalo.me/0981473028" target="_blank" class="btn-cta"><i class="fa-solid fa-phone"></i> Liên hệ Zalo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-badge">Chuyên nghiệp & Tận tâm</div>
+        <h2>Trung Tâm Cầu Lông Linh Đàm</h2>
+        <p>Đào tạo từ cơ bản đến nâng cao, chuyên luyện đánh giải và nâng cao trình độ. Đội ngũ HLV tận tâm, cơ sở vật chất hiện đại, lịch tập linh hoạt theo yêu cầu học viên!</p>
+        <div class="hero-buttons">
+            <a href="#datlich" class="btn-main"><i class="fa-solid fa-calendar-check"></i> Đăng Ký Lịch Tập Ngay</a>
+            <a href="https://zalo.me/0981473028" target="_blank" class="btn-secondary"><i class="fa-solid fa-comment-dots"></i> Tư Vấn Qua Zalo</a>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div id="coso" class="section-title">
+            <h3>Hệ Thống Cơ Sở & Lớp Học</h3>
+            <p>Địa điểm tập luyện chuyên nghiệp tại Hà Nội</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h4><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> Địa Điểm Sân Tập</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-map-pin"></i>
+                        <div>
+                            <strong>Cơ sở 1:</strong> Sân cầu lông Đại Thanh (Đường Phan Trọng Tuệ / Giữa số 61 và 63 đối diện KĐT Đại Thanh, Hà Nội).<br>
+                            <a href="https://maps.app.goo.gl/JFTjGEadPPQGKvrE8" target="_blank" class="map-link"><i class="fa-solid fa-route"></i> Xem đường đi Google Maps</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-map-pin"></i>
+                        <div>
+                            <strong>Cơ sở 2:</strong> Sân cầu lông Ngọc Vân (948 Quang Trung, Yên Nghĩa, Hà Nội).<br>
+                            <a href="https://maps.app.goo.gl/zvnaJq1NNevaxzfL6" target="_blank" class="map-link"><i class="fa-solid fa-route"></i> Xem đường đi Google Maps</a>
+                        </div>
+                    </li>
+                    <li><i class="fa-solid fa-check" style="color: var(--accent-orange);"></i> <span>Sân thảm tiêu chuẩn, thoáng mát, ánh sáng chuẩn thi đấu.</span></li>
+                </ul>
+            </div>
+
+            <div id="khoahoc" class="card">
+                <h4><i class="fa-solid fa-graduation-cap" style="color: var(--primary-green);"></i> Các Chương Trình Đào Tạo</h4>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cơ bản:</strong> Làm quen kỹ thuật cầm vợt, di chuyển và phát cầu.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Nâng cao:</strong> Hoàn thiện kỹ thuật đập cầu, bỏ nhỏ, chiến thuật.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Luyện đánh giải:</strong> Rèn luyện thể lực, tâm lý thi đấu thực chiến.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Học 1-1 (HLV riêng):</strong> Lịch trình cá nhân hóa theo yêu cầu.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Ảnh bìa hiển thị ngay dưới Hệ thống cơ sở -->
+        <div class="facility-banner">
+            <img src="anhbia.jpg" alt="Ảnh Bìa Trung Tâm Cầu Lông Linh Đàm">
+        </div>
+
+        <div id="giaidau" class="tournament-section">
+            <div class="tournament-grid">
+                <div class="tournament-info">
+                    <h4>🏆 Giải Cầu Lông Nội Bộ 2026</h4>
+                    <p>Mới đây, Trung Tâm Cầu Lông Linh Đàm đã tổ chức thành công <strong>Giải Cầu Lông Nội Bộ 2026</strong>. Đây là sân chơi bổ ích, gắn kết cộng đồng học viên, tạo cơ hội cọ sát thực tế và bùng nổ đam mê.</p>
+                    <p>Các trận đấu diễn ra vô cùng sôi nổi, kịch tính với tinh thần thể thao cao thượng và sự cổ vũ nhiệt tình từ đông đảo học viên.</p>
+                    <a href="https://zalo.me/0981473028" target="_blank" class="btn-main" style="display:inline-block; margin-top: 5px;">Liên Hệ Đăng Ký Giải Đấu</a>
+                </div>
+                <div class="gallery-grid">
+                    <img src="giai1.jpg" alt="Giải Cầu Lông 1">
+                    <img src="giai2.jpg" alt="Giải Cầu Lông 2">
+                    <img src="giai3.jpg" alt="Giải Cầu Lông 3">
+                    <img src="giai4.jpg" alt="Giải Cầu Lông 4">
+                    <img src="giai5.jpg" alt="Giải Cầu Lông 5">
+                    <img src="giai6.jpg" alt="Giải Cầu Lông 6">
+                    <img src="giai7.jpg" alt="Giải Cầu Lông 7">
+                    <img src="giai8.jpg" alt="Giải Cầu Lông 8">
+                    <img src="giai9.jpg" alt="Giải Cầu Lông 9">
+                    <img src="giai10.jpg" alt="Giải Cầu Lông 10">
+                </div>
+            </div>
+        </div>
+
+        <div id="datlich" class="booking-section">
+            <h3>Đăng Ký Lớp Học & Đặt Lịch Tập Trực Tuyến</h3>
+            <p>Điền thông tin của bạn bên dưới, bấm gửi sẽ tự động chuyển tiếp nội dung về Zalo trung tâm!</p>
+            
+            <form class="booking-form" id="bookingForm" onsubmit="sendToZalo(event)">
+                <div>
+                    <input type="text" id="hoTen" placeholder="Họ và tên của bạn *" required>
+                </div>
+                <div>
+                    <input type="tel" id="soDienThoai" placeholder="Số điện thoại / Zalo *" required>
+                </div>
+                <div>
+                    <select id="coSo" required>
+                        <option value="">-- Chọn cơ sở tập luyện --</option>
+                        <option value="Cơ sở 1: Sân Đại Thanh (Phan Trọng Tuệ)">Cơ sở 1: Sân Đại Thanh (Phan Trọng Tuệ)</option>
+                        <option value="Cơ sở 2: Sân Ngọc Vân (Quang Trung, Yên Nghĩa)">Cơ sở 2: Sân Ngọc Vân (Quang Trung, Yên Nghĩa)</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="khoaHocSelect" onchange="checkHoc11(this)" required>
+                        <option value="">-- Chọn khóa học / nhu cầu --</option>
+                        <option value="Lớp Cơ Bản">Lớp Cơ Bản</option>
+                        <option value="Lớp Nâng Cao & Đánh Giải">Lớp Nâng Cao & Đánh Giải</option>
+                        <option value="Học theo nhóm riêng">Học theo nhóm riêng</option>
+                        <option value="Học 1-1 (Huấn luyện viên riêng)">Học 1-1 (Huấn luyện viên riêng)</option>
+                        <option value="Đăng ký miễn phí học thử">Đăng ký miễn phí học thử</option>
+                    </select>
+                </div>
+                
+                <div id="khuVucGroup" class="full-width">
+                    <input type="text" id="khuVucInput" placeholder="📍 Nhập khu vực học mong muốn (Ví dụ: Tại nhà, Sân gần Linh Đàm...)">
+                </div>
+
+                <div class="full-width">
+                    <input type="text" id="ghiChu" placeholder="Ghi chú thời gian rảnh / Yêu cầu riêng của bạn (Ví dụ: Tập chiều thứ 2, 4, 6...)">
+                </div>
+                <div class="full-width">
+                    <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Gửi Đăng Ký Qua Zalo</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h5>Trung Tâm Cầu Lông Linh Đàm</h5>
+                <p>Nơi chắp cánh đam mê cầu lông, rèn luyện sức khỏe và chinh phục mọi đỉnh cao thể thao.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61577241694877" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@hvcaulonglinhdam" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://zalo.me/0981473028" target="_blank" title="Zalo"><i class="fa-solid fa-comment"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Hệ Thống Cơ Sở</h5>
+                <p><i class="fa-solid fa-location-dot"></i> CS1: Sân Đại Thanh, Phan Trọng Tuệ, Hà Nội</p>
+                <p><i class="fa-solid fa-location-dot"></i> CS2: 948 Quang Trung, Yên Nghĩa, Hà Nội</p>
+            </div>
+            <div class="footer-col">
+                <h5>Liên Hệ & Hỗ Trợ</h5>
+                <p><i class="fa-solid fa-phone"></i> Hotline 1: 0981 473 028</p>
+                <p><i class="fa-solid fa-phone"></i> Hotline 2: 0944 069 936</p>
+                <p><i class="fa-solid fa-envelope"></i> lindanbadminton70@gmail.com</p>
+                <a href="https://zalo.me/0981473028" target="_blank" style="color: var(--accent-yellow); margin-top: 8px; font-weight: 700;"><i class="fa-solid fa-arrow-right"></i> Đặt lịch học nhanh qua Zalo</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Trung Tâm Cầu Lông Linh Đàm. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        function checkHoc11(selectObj) {
+            var khuVucGroup = document.getElementById("khuVucGroup");
+            var khuVucInput = document.getElementById("khuVucInput");
+            if (selectObj.value === "Học 1-1 (Huấn luyện viên riêng)") {
+                khuVucGroup.style.display = "block";
+                khuVucInput.setAttribute("required", "true");
+            } else {
+                khuVucGroup.style.display = "none";
+                khuVucInput.removeAttribute("required");
+                khuVucInput.value = "";
+            }
+        }
+
+        function sendToZalo(event) {
+            event.preventDefault();
+            
+            // Lấy dữ liệu từ form
+            var hoTen = document.getElementById("hoTen").value;
+            var soDienThoai = document.getElementById("soDienThoai").value;
+            var coSo = document.getElementById("coSo").value;
+            var khoaHoc = document.getElementById("khoaHocSelect").value;
+            var khuVuc = document.getElementById("khuVucInput").value;
+            var ghiChu = document.getElementById("ghiChu").value;
+
+            // Tạo nội dung tin nhắn soạn sẵn
+            var message = `Xin chào Trung tâm Cầu Lông Linh Đàm, tôi muốn đăng ký lớp học:%0A` +
+                          `- Họ tên: ${hoTen}%0A` +
+                          `- SĐT/Zalo: ${soDienThoai}%0A` +
+                          `- Cơ sở: ${coSo}%0A` +
+                          `- Khóa học: ${khoaHoc}`;
+            
+            if (khuVuc) {
+                message += `%0A- Khu vực học 1-1: ${khuVuc}`;
+            }
+            if (ghiChu) {
+                message += `%0A- Ghi chú: ${ghiChu}`;
+            }
+
+            // Số Zalo nhận thông tin
+            var zaloNumber = "0981473028";
+            
+            // Mở link chat Zalo với nội dung đã soạn sẵn
+            var zaloUrl = `https://zalo.me/${zaloNumber}?text=${message}`;
+            window.open(zaloUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
