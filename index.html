@@ -358,6 +358,44 @@
             text-transform: uppercase;
         }
 
+        /* Nút liên hệ giá học cho từng tab */
+        .price-contact-box {
+            background: #e8f5e9;
+            border-left: 4px solid var(--primary-green);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .price-contact-box span {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .btn-price-contact {
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-price-contact:hover {
+            background: #d45b15;
+        }
+
         .tab-img img {
             width: 100%;
             height: 250px;
@@ -681,14 +719,14 @@
                 </ul>
             </div>
 
-            <!-- Tổng quan khóa học đã được cập nhật chuẩn xác -->
+            <!-- Tổng quan khóa học -->
             <div class="card">
                 <h4><i class="fa-solid fa-graduation-cap" style="color: var(--primary-green);"></i> Các Khóa Học Tại Trung Tâm</h4>
                 <ul>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cơ Bản:</strong> Làm quen và học kỹ thuật cơ bản.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Nâng Cao:</strong> Hoàn thiện kỹ thuật, thể lực và phản xạ.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Chuyên Sâu:</strong> HLV trưởng trực tiếp đứng lớp, định hướng các giải lớn.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cá Nhân (1-1 đến 1-4):</strong> Thầy giáo dạy riêng theo giờ, theo yêu cầu học viên.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Chuyên Sâu:</strong> HLV trưởng trực tiếp đứng lớp, định hướng giải lớn.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cá Nhân (1-1 đến 1-4):</strong> Thầy giáo dạy riêng theo giờ, theo yêu cầu.</li>
                 </ul>
             </div>
         </div>
@@ -723,6 +761,10 @@
                         <li><i class="fa-solid fa-check"></i> Học các động tác cơ bản: phát cầu, bỏ nhỏ, phông cầu</li>
                         <li><i class="fa-solid fa-check"></i> Rèn luyện bộ pháp di chuyển cơ bản trên sân</li>
                     </ul>
+                    <div class="price-contact-box">
+                        <span>💬 Quan tâm học phí lớp Cơ Bản?</span>
+                        <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
+                    </div>
                 </div>
                 <div class="tab-img">
                     <img src="coban.jpg" alt="Lớp Cơ Bản Cầu Lông">
@@ -739,36 +781,40 @@
                         <li><i class="fa-solid fa-check"></i> Đẩy mạnh thể lực chuyên sâu cho cầu lông</li>
                         <li><i class="fa-solid fa-check"></i> Bài tập bổ trợ tăng tốc độ phản xạ nhanh nhạy trên sân</li>
                     </ul>
+                    <div class="price-contact-box">
+                        <span>💬 Quan tâm học phí lớp Nâng Cao?</span>
+                        <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
+                    </div>
                 </div>
                 <div class="tab-img">
                     <img src="nangcao.jpg" alt="Lớp Nâng Cao Cầu Lông">
                 </div>
             </div>
 
-            <!-- Tab 3: Chuyên Sâu (HLV TRƯỞNG ĐỨNG LỚP & ĐỊNH HƯỚNG GIẢI LỚN) -->
+            <!-- Tab 3: Chuyên Sâu (ĐÃ CẬP NHẬT: XÓA GIÁ, TẬP TRUNG QUY MÔ, ĐẦU VÀO, YÊU CẦU & ĐỊNH HƯỚNG) -->
             <div id="chuyensau" class="tab-content">
                 <div class="tab-info">
                     <h4>Lớp Cầu Lông Chuyên Sâu (HLV Trưởng Trực Tiếp Đứng Lớp)</h4>
                     <p><strong>Triết lý đào tạo:</strong> <em>"Không chỉ dạy đánh cầu, mà đào tạo học viên biết tập luyện, biết thi đấu và hướng tới các giải đấu lớn."</em></p>
                     
-                    <div class="sub-heading">I. Mô Hình & Quy Định Lớp Học</div>
+                    <div class="sub-heading">I. Mô Hình & Yêu Cầu Đầu Vào</div>
                     <ul>
-                        <li><i class="fa-solid fa-check"></i> <strong>Quy mô:</strong> 05 – 06 học viên/lớp (Kiểm tra đầu vào, phân loại trình độ khắt khe).</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Thời gian:</strong> 15h30 – 17h30 (Thời lượng: 120 phút/buổi).</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Học phí:</strong> 200.000đ/buổi (2.000.000đ/khóa 10 buổi). Nghỉ tối đa 02 buổi/khóa.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Quy mô tối ưu:</strong> 05 – 06 học viên/lớp để đảm bảo chất lượng theo sát từng cá nhân.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Kiểm tra đầu vào:</strong> Học viên phải qua kiểm tra và phân loại trình độ khắt khe trước khi xếp lớp.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Thời gian biểu:</strong> 15h30 – 17h30 (Thời lượng: 120 phút/buổi, kết hợp 60 phút thể lực chuyên môn và 60 phút kỹ chiến thuật thực chiến).</li>
                     </ul>
 
-                    <div class="sub-heading">II. Cơ Cấu Buổi Học 120 Phút</div>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> <strong>Thể lực chuyên môn (60 phút):</strong> Sức mạnh, sức bền, tốc độ phản xạ và bật nhảy chuyên biệt.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Kỹ thuật & Chiến thuật (60 phút):</strong> Sửa lỗi cá nhân chi tiết, định hình lối đánh thực chiến.</li>
-                    </ul>
-
-                    <div class="sub-heading">III. Định Hướng Giải Đấu & Đồng Hành</div>
+                    <div class="sub-heading">II. Định Hướng & Đồng Hành Thi Đấu</div>
                     <ul>
                         <li><i class="fa-solid fa-check"></i> Xây dựng chiến thuật chuyên sâu theo nội dung đăng ký (Đơn Nam/Nữ, Đôi Nam/Nữ/Nam-Nữ).</li>
-                        <li><i class="fa-solid fa-check"></i> Đánh giá tiến bộ qua phiếu theo dõi cá nhân, kiểm tra cuối khóa và <strong>được HLV trưởng trực tiếp đi cùng, hỗ trợ chiến thuật khi đi thi đấu giải lớn</strong>.</li>
+                        <li><i class="fa-solid fa-check"></i> Đánh giá tiến bộ qua phiếu theo dõi cá nhân và kiểm tra cuối khóa.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Đặc quyền:</strong> Được Trung tâm định hướng, đăng ký tham gia các giải đấu lớn và <strong>được HLV trưởng trực tiếp đi cùng, hỗ trợ chiến thuật</strong> khi thi đấu.</li>
                     </ul>
+
+                    <div class="price-contact-box">
+                        <span>💬 Quan tâm chi phí & lịch tập lớp Chuyên Sâu?</span>
+                        <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
+                    </div>
                 </div>
 
                 <div class="tab-img-container">
@@ -784,16 +830,20 @@
                 </div>
             </div>
 
-            <!-- Tab 4: Cá Nhân (1-1 ĐẾN 1-4 THEO GIỜ & YÊU CẦU RIÊNG) -->
+            <!-- Tab 4: Cá Nhân -->
             <div id="canhan" class="tab-content">
                 <div class="tab-info">
-                    <h4>Lớp Cá Nhân (1-1, 1-2, 1-3, 1-4) – HLV Dạy Riêng Theo Yêu Cầu</h4>
+                    <h4>Lớp Cá Nhân (1-1, 1-2, 1-3, 1-4) – HLV Dạy Riêng Theo Giờ</h4>
                     <p>Hình thức học được thiết kế linh hoạt tuyệt đối cho cá nhân hoặc nhóm nhỏ theo giờ giấc và mong muốn riêng của học viên.</p>
                     <ul>
                         <li><i class="fa-solid fa-check"></i> <strong>Hình thức học:</strong> Nhận dạy riêng 1-1, 1-2, 1-3 hoặc nhóm nhỏ 1-4 theo lịch rảnh của học viên.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Giáo án độc quyền:</strong> Được thầy giáo trực tiếp giảng dạy và thiết kế giáo án riêng biệt nhằm bổ túc chính xác những phần thể lực hay kỹ thuật còn thiếu sót.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Chủ động yêu cầu:</strong> Học viên hoàn toàn có quyền yêu cầu HLV tập trung dạy các kỹ thuật nâng cao hoặc chiến thuật cụ thể theo mong muốn cá nhân.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Giáo án độc quyền:</strong> Thầy giáo trực tiếp giảng dạy và thiết kế giáo án riêng biệt nhằm bổ túc chính xác thể lực hay kỹ thuật còn thiếu sót.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Yêu cầu riêng:</strong> Học viên được quyền yêu cầu HLV tập trung dạy các kỹ thuật hoặc chiến thuật theo ý muốn cá nhân.</li>
                     </ul>
+                    <div class="price-contact-box">
+                        <span>💬 Quan tâm học phí lớp Cá Nhân / 1 kèm 1?</span>
+                        <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
+                    </div>
                 </div>
                 <div class="tab-img">
                     <img src="canhan.jpg" alt="Lớp Cá Nhân HLV Riêng">
