@@ -260,7 +260,7 @@
             margin-top: 4px;
         }
 
-        /* --- PHẦN TAB CHƯƠNG TRÌNH ĐÀO TẠO MỚI (TỐI ƯU BỐ CỤC) --- */
+        /* --- PHẦN TAB CHƯƠNG TRÌNH ĐÀO TẠO MỚI (TỐI ƯU BỐ CỤC MÁY TÍNH) --- */
         .training-section {
             background: var(--white);
             border-radius: 20px;
@@ -302,8 +302,8 @@
 
         .tab-content {
             display: none;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 35px;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 40px;
             align-items: start;
             animation: fadeIn 0.4s ease-in-out;
         }
@@ -331,19 +331,22 @@
             line-height: 1.6;
         }
 
-        /* Định dạng khối nội dung thông thoáng, không bị bó hẹp grid */
         .content-block {
-            margin-bottom: 16px;
+            margin-bottom: 18px;
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #eee;
         }
 
         .content-block .sub-title {
             font-size: 15px;
             font-weight: 800;
             color: var(--accent-orange);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             text-transform: uppercase;
         }
 
@@ -356,7 +359,7 @@
             position: relative;
             padding-left: 20px;
             margin-bottom: 8px;
-            font-size: 14px;
+            font-size: 13.5px;
             color: #444;
             line-height: 1.5;
         }
@@ -367,7 +370,7 @@
             left: 0;
             color: var(--accent-orange);
             font-weight: bold;
-            font-size: 12px;
+            font-size: 11px;
             top: 1px;
         }
 
@@ -409,9 +412,14 @@
             background: #d45b15;
         }
 
-        .tab-img img {
+        .tab-img-container {
+            position: sticky;
+            top: 90px;
+        }
+
+        .tab-img-container img {
             width: 100%;
-            height: 240px;
+            height: 230px;
             object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -423,29 +431,28 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
-            margin-top: 10px;
         }
 
         .expert-gallery img {
             width: 100%;
-            height: 75px;
+            height: 70px;
             object-fit: cover;
             border-radius: 6px;
             transition: 0.3s;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 0 !important;
         }
 
         .expert-gallery img:hover {
             transform: scale(1.05);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             .tab-content {
                 grid-template-columns: 1fr;
             }
-            .training-tabs {
-                flex-direction: column;
-                align-items: stretch;
+            .tab-img-container {
+                position: static;
             }
         }
         /* ------------------------------------------- */
@@ -781,7 +788,7 @@
                         <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
                     </div>
                 </div>
-                <div class="tab-img">
+                <div class="tab-img-container">
                     <img src="coban.jpg" alt="Lớp Cơ Bản Cầu Lông">
                 </div>
             </div>
@@ -803,37 +810,54 @@
                         <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
                     </div>
                 </div>
-                <div class="tab-img">
+                <div class="tab-img-container">
                     <img src="nangcao.jpg" alt="Lớp Nâng Cao Cầu Lông">
                 </div>
             </div>
 
-            <!-- Tab 3: Chuyên Sâu (ĐÃ CẬP NHẬT BỐ CỤC SẠCH SẼ, THOÁNG MÁT) -->
+            <!-- Tab 3: Chuyên Sâu (CẬP NHẬT NỘI DUNG CHUẨN XÁC & BỐ CỤC ĐẸP MẮT TRÊN MÁY TÍNH) -->
             <div id="chuyensau" class="tab-content">
                 <div class="tab-info">
-                    <h4>Lớp Cầu Lông Chuyên Sâu (HLV Trưởng Trực Tiếp Đứng Lớp)</h4>
-                    <p><strong>Mục tiêu đào tạo:</strong> Lớp chuyên sâu được xây dựng dành cho những học viên có mong muốn tiến bộ rõ rệt về thể lực, kỹ thuật và chiến thuật, hướng tới việc có thể tham gia các giải đấu cầu lông.</p>
+                    <h4>🏸 Lớp Cầu Lông Chuyên Sâu (HLV Trưởng Trực Tiếp Đứng Lớp)</h4>
+                    <p>Đào tạo bài bản từ thể lực, kỹ thuật đến tư duy chiến thuật; phát triển học viên theo lộ trình cá nhân và từng bước hướng tới môi trường thi đấu chuyên nghiệp.</p>
                     
                     <div class="content-block">
-                        <div class="sub-title"><i class="fa-solid fa-circle-chevron-right"></i> I. Mô Hình & Yêu Cầu Đầu Vào</div>
+                        <div class="sub-title"><i class="fa-solid fa-bullseye"></i> Mục Tiêu Đào Tạo</div>
+                        <p>Mục tiêu không chỉ là tham gia một giải đấu, mà là giúp học viên từng bước hình thành tư duy thi đấu, bản lĩnh trên sân và khả năng cạnh tranh ở những sân chơi có chất lượng cao hơn.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="sub-title"><i class="fa-solid fa-list-check"></i> I. Mô Hình Đào Tạo & Yêu Cầu Đầu Vào</div>
                         <ul>
-                            <li><strong>Quy mô tối ưu:</strong> 05 – 06 học viên/lớp để đảm bảo chất lượng theo sát từng cá nhân.</li>
-                            <li><strong>Kiểm tra đầu vào:</strong> Học viên phải qua kiểm tra và phân loại trình độ khắt khe trước khi xếp lớp.</li>
-                            <li><strong>Thời gian biểu:</strong> 15h30 – 17h30 (Thời lượng: 120 phút/buổi, kết hợp 60 phút thể lực chuyên môn và 60 phút kỹ chiến thuật thực chiến).</li>
+                            <li><strong>Quy mô lớp học (05 – 06 học viên/lớp):</strong> Số lượng giới hạn nhằm đảm bảo HLV có thể theo sát từng học viên, phân tích kỹ thuật và điều chỉnh giáo án theo năng lực cá nhân.</li>
+                            <li><strong>Kiểm tra & phân loại đầu vào:</strong> Học viên được kiểm tra và đánh giá trình độ trước khi xếp lớp, đảm bảo sự tương đồng về năng lực và khả năng tiếp thu trong quá trình tập luyện.</li>
+                            <li><strong>Thời lượng đào tạo (15h30 – 17h30 | 120 phút/buổi):</strong>
+                                <br>• <em>60 phút – Thể lực chuyên môn:</em> sức bền, tốc độ, phản xạ, sức mạnh và khả năng di chuyển.
+                                <br>• <em>60 phút – Kỹ thuật & chiến thuật thực chiến:</em> hoàn thiện kỹ thuật, xử lý tình huống, xây dựng lối chơi và áp dụng vào thi đấu.
+                            </li>
                         </ul>
                     </div>
 
                     <div class="content-block">
-                        <div class="sub-title"><i class="fa-solid fa-circle-chevron-right"></i> II. Định Hướng & Đồng Hành Thi Đấu</div>
+                        <div class="sub-title"><i class="fa-solid fa-chess"></i> II. Định Hướng Thi Đấu & Phát Triển Cá Nhân</div>
                         <ul>
-                            <li>Xây dựng chiến thuật chuyên sâu theo nội dung đăng ký (Đơn Nam/Nữ, Đôi Nam/Nữ/Nam-Nữ).</li>
-                            <li>Đánh giá tiến bộ qua phiếu theo dõi cá nhân và kiểm tra cuối khóa.</li>
-                            <li><strong>Đặc quyền:</strong> Được Trung tâm định hướng, đăng ký tham gia các giải đấu lớn và được HLV trưởng trực tiếp đi cùng, hỗ trợ chiến thuật khi thi đấu.</li>
+                            <li><strong>Đào tạo theo mục tiêu thi đấu:</strong> Học viên được định hướng lối chơi và chiến thuật phù hợp với từng nội dung: <em>Đơn Nam | Đơn Nữ | Đôi Nam | Đôi Nữ | Đôi Nam – Nữ</em>. Giáo án được điều chỉnh dựa trên điểm mạnh, điểm yếu, thể lực và phong cách thi đấu của từng học viên.</li>
+                            <li><strong>Theo dõi tiến bộ:</strong> Phiếu theo dõi và đánh giá cá nhân; kiểm tra kỹ thuật, thể lực và khả năng thực chiến; đánh giá tiến bộ theo từng giai đoạn và điều chỉnh giáo án theo mục tiêu phát triển.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="sub-title"><i class="fa-solid fa-handshake-angle"></i> III. Đặc Quyền Đồng Hành Thi Đấu</div>
+                        <p>Học viên được Trung tâm định hướng giải đấu phù hợp và HLV trưởng trực tiếp đồng hành, hỗ trợ:</p>
+                        <ul>
+                            <li>Phân tích đối thủ & xây dựng chiến thuật.</li>
+                            <li>Điều chỉnh chiến thuật trong thi đấu.</li>
+                            <li>Đánh giá và rút kinh nghiệm sau trận đấu.</li>
                         </ul>
                     </div>
 
                     <div class="price-contact-box">
-                        <span>💬 Quan tâm chi phí & lịch tập lớp Chuyên Sâu?</span>
+                        <span>💬 Quan tâm lịch tập & chi phí lớp Chuyên Sâu?</span>
                         <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
                     </div>
                 </div>
@@ -868,7 +892,7 @@
                         <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
                     </div>
                 </div>
-                <div class="tab-img">
+                <div class="tab-img-container">
                     <img src="canhan.jpg" alt="Lớp Cá Nhân HLV Riêng">
                 </div>
             </div>
