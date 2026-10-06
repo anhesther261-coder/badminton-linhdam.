@@ -583,24 +583,24 @@
 
         <div id="datlich" class="booking-section">
             <h3>Đăng Ký Lớp Học & Đặt Lịch Tập Trực Tuyến</h3>
-            <p>Điền thông tin của bạn bên dưới, bấm gửi sẽ tự động chuyển tiếp nội dung về Zalo trung tâm!</p>
+            <p>Điền thông tin của bạn bên dưới, hệ thống sẽ tự động gửi thông tin về email của trung tâm!</p>
             
-            <form class="booking-form" onsubmit="sendToZalo(event)">
+            <form class="booking-form" action="https://formspree.io/f/mjygkkqr" method="POST">
                 <div>
-                    <input type="text" id="hoTen" placeholder="Họ và tên của bạn *" required>
+                    <input type="text" name="Ho_Va_Ten" placeholder="Họ và tên của bạn *" required>
                 </div>
                 <div>
-                    <input type="tel" id="soDienThoai" placeholder="Số điện thoại / Zalo *" required>
+                    <input type="tel" name="So_Dien_Thoai" placeholder="Số điện thoại / Zalo *" required>
                 </div>
                 <div>
-                    <select id="coSo" required>
+                    <select name="Co_So" required>
                         <option value="">-- Chọn cơ sở tập luyện --</option>
                         <option value="Cơ sở 1: Sân Đại Thanh (Phan Trọng Tuệ)">Cơ sở 1: Sân Đại Thanh (Phan Trọng Tuệ)</option>
                         <option value="Cơ sở 2: Sân Ngọc Vân (Quang Trung, Yên Nghĩa)">Cơ sở 2: Sân Ngọc Vân (Quang Trung, Yên Nghĩa)</option>
                     </select>
                 </div>
                 <div>
-                    <select id="khoaHocSelect" onchange="checkHoc11(this)" required>
+                    <select name="Khoa_Hoc" id="khoaHocSelect" onchange="checkHoc11(this)" required>
                         <option value="">-- Chọn khóa học / nhu cầu --</option>
                         <option value="Lớp Cơ Bản">Lớp Cơ Bản</option>
                         <option value="Lớp Nâng Cao & Đánh Giải">Lớp Nâng Cao & Đánh Giải</option>
@@ -611,14 +611,14 @@
                 </div>
                 
                 <div id="khuVucGroup" class="full-width">
-                    <input type="text" id="khuVucInput" placeholder="📍 Nhập khu vực học mong muốn (Ví dụ: Tại nhà, Sân gần Linh Đàm...)">
+                    <input type="text" name="Khu_Vuc" id="khuVucInput" placeholder="📍 Nhập khu vực học mong muốn (Ví dụ: Tại nhà, Sân gần Linh Đàm...)">
                 </div>
 
                 <div class="full-width">
-                    <input type="text" id="ghiChu" placeholder="Ghi chú thời gian rảnh / Yêu cầu riêng của bạn (Ví dụ: Tập chiều thứ 2, 4, 6...)">
+                    <input type="text" name="Ghi_Chu" placeholder="Ghi chú thời gian rảnh / Yêu cầu riêng của bạn (Ví dụ: Tập chiều thứ 2, 4, 6...)">
                 </div>
                 <div class="full-width">
-                    <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Gửi Đăng Ký Qua Zalo</button>
+                    <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Gửi Đăng Ký Ngay</button>
                 </div>
             </form>
         </div>
@@ -666,36 +666,6 @@
                 khuVucInput.removeAttribute("required");
                 khuVucInput.value = "";
             }
-        }
-
-        function sendToZalo(event) {
-            event.preventDefault();
-            
-            var hoTen = document.getElementById("hoTen").value;
-            var soDienThoai = document.getElementById("soDienThoai").value;
-            var coSo = document.getElementById("coSo").value;
-            var khoaHoc = document.getElementById("khoaHocSelect").value;
-            var khuVuc = document.getElementById("khuVucInput").value;
-            var ghiChu = document.getElementById("ghiChu").value;
-
-            var text = "Xin chào Trung tâm Cầu Lông Linh Đàm, tôi muốn đăng ký lớp học:\n" +
-                       "- Họ tên: " + hoTen + "\n" +
-                       "- SĐT/Zalo: " + soDienThoai + "\n" +
-                       "- Cơ sở: " + coSo + "\n" +
-                       "- Khóa học: " + khoaHoc;
-            
-            if (khuVuc) {
-                text += "\n- Khu vực học 1-1: " + khuVuc;
-            }
-            if (ghiChu) {
-                text += "\n- Ghi chú: " + ghiChu;
-            }
-
-            var encodedText = encodeURIComponent(text);
-            var zaloNumber = "0981473028";
-            var zaloUrl = "https://zalo.me/" + zaloNumber + "?text=" + encodedText;
-            
-            window.open(zaloUrl, '_blank');
         }
     </script>
 
