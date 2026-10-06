@@ -260,6 +260,145 @@
             margin-top: 4px;
         }
 
+        /* --- PHẦN TAB CHƯƠNG TRÌNH ĐÀO TẠO MỚI --- */
+        .training-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+            margin-top: 35px;
+        }
+
+        .training-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .tab-btn {
+            background: #f0f0f0;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(11, 107, 58, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px;
+            align-items: start;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: grid;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tab-info h4 {
+            font-size: 24px;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .tab-info p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .tab-info ul {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .tab-info ul li {
+            padding: 5px 0;
+            font-size: 14px;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .tab-info ul li i {
+            color: var(--accent-orange);
+            margin-top: 4px;
+        }
+
+        .sub-heading {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin: 15px 0 8px 0;
+            text-transform: uppercase;
+        }
+
+        .tab-img img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        /* 5 Ảnh dành riêng cho Lớp chuyên sâu */
+        .expert-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .expert-gallery img {
+            width: 100%;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .expert-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .tab-content {
+                grid-template-columns: 1fr;
+            }
+            .training-tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        /* ------------------------------------------- */
+
         .map-link {
             display: inline-flex;
             align-items: center;
@@ -516,7 +655,7 @@
     <div class="container">
 
         <div id="coso" class="section-title">
-            <h3>Hệ Thống Cơ Sở & Lớp Học</h3>
+            <h3>Hệ Thống Cơ Sở Tập Luyện</h3>
             <p>Địa điểm tập luyện chuyên nghiệp tại Hà Nội</p>
         </div>
 
@@ -542,13 +681,14 @@
                 </ul>
             </div>
 
-            <div id="khoahoc" class="card">
-                <h4><i class="fa-solid fa-graduation-cap" style="color: var(--primary-green);"></i> Các Chương Trình Đào Tạo</h4>
+            <!-- Tổng quan khóa học nhỏ gọn bên cạnh -->
+            <div class="card">
+                <h4><i class="fa-solid fa-graduation-cap" style="color: var(--primary-green);"></i> Các Khóa Học Tại Trung Tâm</h4>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cơ bản:</strong> Làm quen kỹ thuật cầm vợt, di chuyển và phát cầu.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Nâng cao:</strong> Hoàn thiện kỹ thuật đập cầu, bỏ nhỏ, chiến thuật.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Luyện đánh giải:</strong> Rèn luyện thể lực, tâm lý thi đấu thực chiến.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Học 1-1 (HLV riêng):</strong> Lịch trình cá nhân hóa theo yêu cầu.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cơ Bản:</strong> Làm quen và học kỹ thuật cơ bản.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Nâng Cao:</strong> Hoàn thiện kỹ thuật, thể lực và phản xạ.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Chuyên Sâu:</strong> Đánh giải, chịu áp lực thực chiến.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cá Nhân:</strong> HLV trưởng đào tạo riêng 1-1, 1-2, 1-3.</li>
                 </ul>
             </div>
         </div>
@@ -557,6 +697,117 @@
         <div class="facility-banner">
             <img src="anhbia.jpg" alt="Ảnh Bìa Trung Tâm Cầu Lông Linh Đàm">
         </div>
+
+        <!-- PHẦN CHƯƠNG TRÌNH ĐÀO TẠO CHI TIẾT DẠNG TAB -->
+        <div id="khoahoc" class="training-section">
+            <div class="section-title" style="margin-bottom: 25px;">
+                <h3>Chi Tiết Chương Trình Đào Tạo</h3>
+                <p>Nhấp vào từng lớp học bên dưới để xem giáo trình chi tiết và hình ảnh minh họa</p>
+            </div>
+
+            <!-- Các nút Tab -->
+            <div class="training-tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'coban')"><i class="fa-solid fa-seedling"></i> Lớp Cơ Bản</button>
+                <button class="tab-btn" onclick="openTab(event, 'nangcao')"><i class="fa-solid fa-bolt"></i> Lớp Nâng Cao</button>
+                <button class="tab-btn" onclick="openTab(event, 'chuyensau')"><i class="fa-solid fa-trophy"></i> Lớp Chuyên Sâu</button>
+                <button class="tab-btn" onclick="openTab(event, 'canhan')"><i class="fa-solid fa-user-tie"></i> Lớp Cá Nhân (1-1)</button>
+            </div>
+
+            <!-- Tab 1: Cơ Bản -->
+            <div id="coban" class="tab-content active">
+                <div class="tab-info">
+                    <h4>Lớp Cơ Bản</h4>
+                    <p>Dành cho người mới bắt đầu hoặc muốn xây dựng lại nền tảng kỹ thuật động tác chuẩn xác từ những bước di chuyển đầu tiên.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Làm quen với cách cầm vợt chuẩn xác</li>
+                        <li><i class="fa-solid fa-check"></i> Học các động tác cơ bản: phát cầu, bỏ nhỏ, phông cầu</li>
+                        <li><i class="fa-solid fa-check"></i> Rèn luyện bộ pháp di chuyển cơ bản trên sân</li>
+                    </ul>
+                </div>
+                <div class="tab-img">
+                    <img src="coban.jpg" alt="Lớp Cơ Bản Cầu Lông">
+                </div>
+            </div>
+
+            <!-- Tab 2: Nâng Cao -->
+            <div id="nangcao" class="tab-content">
+                <div class="tab-info">
+                    <h4>Lớp Nâng Cao</h4>
+                    <p>Hoàn thiện toàn diện kỹ thuật và thể lực. Trang bị thêm các bài tập bổ trợ giúp tăng tốc độ phản xạ để học viên có nền tảng vững chắc thi đấu.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Hoàn thiện các kỹ thuật khó và nâng cao tốc độ vung vợt</li>
+                        <li><i class="fa-solid fa-check"></i> Đẩy mạnh thể lực chuyên sâu cho cầu lông</li>
+                        <li><i class="fa-solid fa-check"></i> Bài tập bổ trợ tăng tốc độ phản xạ nhanh nhạy trên sân</li>
+                    </ul>
+                </div>
+                <div class="tab-img">
+                    <img src="nangcao.jpg" alt="Lớp Nâng Cao Cầu Lông">
+                </div>
+            </div>
+
+            <!-- Tab 3: Chuyên Sâu (ĐÃ CẬP NHẬT CHI TIẾT GIÁO ÁN, CHIẾN LƯỢC & 5 ẢNH) -->
+            <div id="chuyensau" class="tab-content">
+                <div class="tab-info">
+                    <h4>Lớp Cầu Lông Chuyên Sâu</h4>
+                    <p><strong>Triết lý đào tạo:</strong> <em>"Không chỉ dạy các con đánh cầu, mà đào tạo các con biết tập luyện, biết thi đấu và biết tự hoàn thiện bản thân."</em></p>
+                    
+                    <div class="sub-heading">I. Mô Hình & Quy Định Lớp Học</div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> <strong>Quy mô:</strong> 05 – 06 học viên/lớp (Phải kiểm tra đầu vào, phân loại trình độ).</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Thời gian:</strong> 15h30 – 17h30 (Thời lượng: 120 phút/buổi).</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Học phí:</strong> 200.000đ/buổi (2.000.000đ/khóa 10 buổi). Nghỉ tối đa 02 buổi/khóa.</li>
+                    </ul>
+
+                    <div class="sub-heading">II. Cơ Cấu Buổi Học 120 Phút</div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> <strong>Thể lực chuyên môn (60 phút):</strong> Phát triển sức mạnh, sức bền, tốc độ phản xạ và bật nhảy chuyên biệt.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Kỹ thuật & Chiến thuật (60 phút):</strong> HLV ưu tiên sửa lỗi cá nhân chi tiết thay vì tập đại trà.</li>
+                    </ul>
+
+                    <div class="sub-heading">III. Nội Dung Đào Tạo Chuyên Sâu</div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> <strong>Thể lực:</strong> Chạy biến tốc, shuttle run, squat, dây kháng lực, bật nhảy tăng cường smash.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Kỹ thuật & Di chuyển:</strong> Bước đệm 4 góc, giao cầu chiến thuật, đập cầu, chém cầu, phản tạt, kỹ thuật lưới (xoa/sủi cầu).</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Chiến thuật:</strong> Xây dựng chiến thuật riêng biệt theo đăng ký (Đơn Nam, Đơn Nữ, Đôi Nam, Đôi Nữ, Đôi Nam Nữ).</li>
+                    </ul>
+
+                    <div class="sub-heading">IV. Đánh Giá & Quyền Lợi Thi Đấu</div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Có phiếu theo dõi cá nhân gửi báo cáo cho phụ huynh sau mỗi buổi qua 7 tiêu chí. Kiểm tra chất lượng cuối khóa (10 buổi).</li>
+                        <li><i class="fa-solid fa-check"></i> Được Trung tâm chủ động tìm kiếm, đăng ký giải đấu và <strong>được HLV đi cùng hỗ trợ khởi động, vạch chiến thuật</strong> trực tiếp khi thi đấu.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-img-container">
+                    <img src="chuyensau1.jpg" alt="Lớp Chuyên Sâu Cầu Lông 1">
+                    <!-- 5 ảnh minh họa cho lớp chuyên sâu -->
+                    <div class="expert-gallery">
+                        <img src="chuyensau2.jpg" alt="Chuyên sâu 2">
+                        <img src="chuyensau3.jpg" alt="Chuyên sâu 3">
+                        <img src="chuyensau4.jpg" alt="Chuyên sâu 4">
+                        <img src="chuyensau5.jpg" alt="Chuyên sâu 5">
+                        <img src="chuyensau.jpg" alt="Chuyên sâu chính">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Cá Nhân -->
+            <div id="canhan" class="tab-content">
+                <div class="tab-info">
+                    <h4>Lớp Cá Nhân (HLV Trưởng Đào Tạo Riêng)</h4>
+                    <p>Hình thức học 1-1, 1-2, 1-3 hoặc theo nhóm nhỏ với giáo án thiết kế độc quyền, khắc phục nhanh chóng các điểm yếu.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Giáo án tập luyện riêng biệt 100% theo trình độ học viên</li>
+                        <li><i class="fa-solid fa-check"></i> Bổ trợ chính xác những vấn đề đang thiếu về thể lực hay kỹ thuật</li>
+                        <li><i class="fa-solid fa-check"></i> Được quyền yêu cầu các nội dung dạy riêng và bổ túc kỹ thuật theo mong muốn</li>
+                    </ul>
+                </div>
+                <div class="tab-img">
+                    <img src="canhan.jpg" alt="Lớp Cá Nhân HLV Riêng">
+                </div>
+            </div>
+        </div>
+        <!-- KẾT THÚC PHẦN TAB ĐÀO TẠO -->
 
         <div id="giaidau" class="tournament-section">
             <div class="tournament-grid">
@@ -603,9 +854,9 @@
                     <select name="Khoa_Hoc" id="khoaHocSelect" onchange="checkHoc11(this)" required>
                         <option value="">-- Chọn khóa học / nhu cầu --</option>
                         <option value="Lớp Cơ Bản">Lớp Cơ Bản</option>
-                        <option value="Lớp Nâng Cao & Đánh Giải">Lớp Nâng Cao & Đánh Giải</option>
-                        <option value="Học theo nhóm riêng">Học theo nhóm riêng</option>
-                        <option value="Học 1-1 (Huấn luyện viên riêng)">Học 1-1 (Huấn luyện viên riêng)</option>
+                        <option value="Lớp Nâng Cao">Lớp Nâng Cao</option>
+                        <option value="Lớp Chuyên Sâu">Lớp Chuyên Sâu</option>
+                        <option value="Học Cá Nhân (HLV riêng)">Học Cá Nhân (HLV riêng)</option>
                         <option value="Đăng ký miễn phí học thử">Đăng ký miễn phí học thử</option>
                     </select>
                 </div>
@@ -655,10 +906,26 @@
     </footer>
 
     <script>
+        // Xử lý chuyển tab nội dung khóa học
+        function openTab(evt, tabName) {
+            var i, tabContent, tabBtns;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            tabBtns = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Xử lý hiện/ẩn khung nhập khu vực khi chọn lớp cá nhân
         function checkHoc11(selectObj) {
             var khuVucGroup = document.getElementById("khuVucGroup");
             var khuVucInput = document.getElementById("khuVucInput");
-            if (selectObj.value === "Học 1-1 (Huấn luyện viên riêng)") {
+            if (selectObj.value === "Học Cá Nhân (HLV riêng)") {
                 khuVucGroup.style.display = "block";
                 khuVucInput.setAttribute("required", "true");
             } else {
