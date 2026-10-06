@@ -585,7 +585,7 @@
             <h3>Đăng Ký Lớp Học & Đặt Lịch Tập Trực Tuyến</h3>
             <p>Điền thông tin của bạn bên dưới, bấm gửi sẽ tự động chuyển tiếp nội dung về Zalo trung tâm!</p>
             
-            <form class="booking-form" id="bookingForm" onsubmit="sendToZalo(event)">
+            <form class="booking-form" onsubmit="sendToZalo(event)">
                 <div>
                     <input type="text" id="hoTen" placeholder="Họ và tên của bạn *" required>
                 </div>
@@ -671,7 +671,6 @@
         function sendToZalo(event) {
             event.preventDefault();
             
-            // Lấy dữ liệu từ form
             var hoTen = document.getElementById("hoTen").value;
             var soDienThoai = document.getElementById("soDienThoai").value;
             var coSo = document.getElementById("coSo").value;
@@ -679,25 +678,23 @@
             var khuVuc = document.getElementById("khuVucInput").value;
             var ghiChu = document.getElementById("ghiChu").value;
 
-            // Tạo nội dung tin nhắn soạn sẵn
-            var message = `Xin chào Trung tâm Cầu Lông Linh Đàm, tôi muốn đăng ký lớp học:%0A` +
-                          `- Họ tên: ${hoTen}%0A` +
-                          `- SĐT/Zalo: ${soDienThoai}%0A` +
-                          `- Cơ sở: ${coSo}%0A` +
-                          `- Khóa học: ${khoaHoc}`;
+            var text = "Xin chào Trung tâm Cầu Lông Linh Đàm, tôi muốn đăng ký lớp học:\n" +
+                       "- Họ tên: " + hoTen + "\n" +
+                       "- SĐT/Zalo: " + soDienThoai + "\n" +
+                       "- Cơ sở: " + coSo + "\n" +
+                       "- Khóa học: " + khoaHoc;
             
             if (khuVuc) {
-                message += `%0A- Khu vực học 1-1: ${khuVuc}`;
+                text += "\n- Khu vực học 1-1: " + khuVuc;
             }
             if (ghiChu) {
-                message += `%0A- Ghi chú: ${ghiChu}`;
+                text += "\n- Ghi chú: " + ghiChu;
             }
 
-            // Số Zalo nhận thông tin
+            var encodedText = encodeURIComponent(text);
             var zaloNumber = "0981473028";
+            var zaloUrl = "https://zalo.me/" + zaloNumber + "?text=" + encodedText;
             
-            // Mở link chat Zalo với nội dung đã soạn sẵn
-            var zaloUrl = `https://zalo.me/${zaloNumber}?text=${message}`;
             window.open(zaloUrl, '_blank');
         }
     </script>
