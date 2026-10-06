@@ -746,7 +746,7 @@
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cơ Bản:</strong> Làm quen và học kỹ thuật cơ bản.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Nâng Cao:</strong> Hoàn thiện kỹ thuật, thể lực và phản xạ.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Chuyên Sâu:</strong> HLV trưởng trực tiếp đứng lớp, định hướng giải lớn.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cá Nhân (1-1 đến 1-4):</strong> HLV trực tiếp kèm riêng theo nhu cầu.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Lớp Cá Nhân Hóa:</strong> HLV trực tiếp kèm riêng (1-1 đến 1-4).</li>
                 </ul>
             </div>
         </div>
@@ -768,7 +768,7 @@
                 <button class="tab-btn active" onclick="openTab(event, 'coban')"><i class="fa-solid fa-seedling"></i> Lớp Cơ Bản</button>
                 <button class="tab-btn" onclick="openTab(event, 'nangcao')"><i class="fa-solid fa-bolt"></i> Lớp Nâng Cao</button>
                 <button class="tab-btn" onclick="openTab(event, 'chuyensau')"><i class="fa-solid fa-trophy"></i> Lớp Chuyên Sâu</button>
-                <button class="tab-btn" onclick="openTab(event, 'canhan')"><i class="fa-solid fa-user-tie"></i> Lớp Cá Nhân (1-1 đến 1-4)</button>
+                <button class="tab-btn" onclick="openTab(event, 'canhan')"><i class="fa-solid fa-user-tie"></i> Lớp Cá Nhân Hóa</button>
             </div>
 
             <!-- Tab 1: Cơ Bản -->
@@ -875,7 +875,7 @@
                 </div>
             </div>
 
-            <!-- Tab 4: Cá Nhân (CẬP NHẬT NỘI DUNG MỚI CHUẨN XÁC) -->
+            <!-- Tab 4: Lớp Cá Nhân Hóa -->
             <div id="canhan" class="tab-content">
                 <div class="tab-info">
                     <h4>👤 Lớp Cá Nhân Hóa – HLV Trực Tiếp Kèm Riêng</h4>
@@ -895,12 +895,12 @@
                     <p><em>→ Hình thức phù hợp cho những học viên muốn được hướng dẫn sát sao hoặc các nhóm muốn có một chương trình tập luyện riêng, chủ động và hiệu quả.</em></p>
 
                     <div class="price-contact-box">
-                        <span>💬 Quan tâm học phí lớp Cá Nhân / 1 kèm 1?</span>
+                        <span>💬 Quan tâm học phí lớp Cá Nhân Hóa?</span>
                         <a href="https://zalo.me/0981473028" target="_blank" class="btn-price-contact"><i class="fa-solid fa-phone"></i> Gọi Hotline / Zalo Tư Vấn</a>
                     </div>
                 </div>
                 <div class="tab-img-container">
-                    <img src="canhan.jpg" alt="Lớp Cá Nhân HLV Riêng">
+                    <img src="canhan.jpg" alt="Lớp Cá Nhân Hóa">
                 </div>
             </div>
         </div>
@@ -953,7 +953,7 @@
                         <option value="Lớp Cơ Bản">Lớp Cơ Bản</option>
                         <option value="Lớp Nâng Cao">Lớp Nâng Cao</option>
                         <option value="Lớp Chuyên Sâu">Lớp Chuyên Sâu (HLV trưởng đứng lớp)</option>
-                        <option value="Học Cá Nhân (1-1 đến 1-4 theo yêu cầu)">Học Cá Nhân (1-1 đến 1-4 theo yêu cầu)</option>
+                        <option value="Lớp Cá Nhân Hóa (1-1 đến 1-4)">Lớp Cá Nhân Hóa (1-1 đến 1-4)</option>
                         <option value="Đăng ký miễn phí học thử">Đăng ký miễn phí học thử</option>
                     </select>
                 </div>
@@ -1018,11 +1018,11 @@
             evt.currentTarget.classList.add("active");
         }
 
-        // Xử lý hiện/ẩn khung nhập khu vực khi chọn lớp cá nhân
+        // Xử lý hiện/ẩn khung nhập khu vực khi chọn lớp cá nhân hóa
         function checkHoc11(selectObj) {
             var khuVucGroup = document.getElementById("khuVucGroup");
             var khuVucInput = document.getElementById("khuVucInput");
-            if (selectObj.value === "Học Cá Nhân (1-1 đến 1-4 theo yêu cầu)") {
+            if (selectObj.value === "Lớp Cá Nhân Hóa (1-1 đến 1-4)") {
                 khuVucGroup.style.display = "block";
                 khuVucInput.setAttribute("required", "true");
             } else {
