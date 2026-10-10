@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trung Tâm Cầu Lông Linh Đàm</title>
-    <!-- Thêm dòng này để đổi icon quả địa cầu thành logo.png của bạn -->
     <link rel="icon" type="image/png" href="logo.png">
     
     <!-- Google Fonts -->
@@ -220,6 +219,191 @@
             font-size: 15px;
         }
 
+        /* --- PHẦN TIN TỨC SỰ KIỆN MIỄN PHÍ THANH HÀ --- */
+        .news-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+            margin-bottom: 35px;
+            border-top: 6px solid var(--accent-orange);
+        }
+
+        .news-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .news-header span {
+            background: #fff3e0;
+            color: var(--accent-orange);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .news-header h3 {
+            font-size: 28px;
+            color: var(--primary-green);
+            font-weight: 900;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .news-info h4 {
+            font-size: 20px;
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .news-info p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .news-detail-block {
+            background: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .news-detail-block h5 {
+            font-size: 15px;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .news-detail-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .news-detail-block ul li {
+            font-size: 13.5px;
+            color: #444;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .news-detail-block ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--accent-orange);
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .news-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .news-images img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .news-images img.full-img {
+            grid-column: span 2;
+            height: 180px;
+        }
+
+        @media (max-width: 992px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- PHẦN FORM ĐĂNG KÝ SỰ KIỆN MIỄN PHÍ --- */
+        .event-booking-box {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .event-booking-box h4 {
+            font-size: 22px;
+            color: var(--accent-yellow);
+            margin-bottom: 8px;
+            font-weight: 900;
+        }
+
+        .event-form {
+            max-width: 600px;
+            margin: 20px auto 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .event-form input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .event-form .full-width {
+            grid-column: span 2;
+        }
+
+        .btn-event-submit {
+            background: var(--accent-orange);
+            color: var(--white);
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-event-submit:hover {
+            background: #d45b15;
+        }
+
+        @media (max-width: 600px) {
+            .event-form {
+                grid-template-columns: 1fr;
+            }
+            .event-form .full-width {
+                grid-column: span 1;
+            }
+        }
+
+        /* Các phần CSS cũ giữ nguyên */
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -263,7 +447,6 @@
             margin-top: 4px;
         }
 
-        /* --- PHẦN TAB CHƯƠNG TRÌNH ĐÀO TẠO MỚI (TỐI ƯU BỐ CỤC MÁY TÍNH) --- */
         .training-section {
             background: var(--white);
             border-radius: 20px;
@@ -377,7 +560,6 @@
             top: 1px;
         }
 
-        /* Nút liên hệ giá học cho từng tab */
         .price-contact-box {
             background: #e8f5e9;
             border-left: 4px solid var(--primary-green);
@@ -429,7 +611,6 @@
             margin-bottom: 12px;
         }
 
-        /* 5 Ảnh dành riêng cho Lớp chuyên sâu */
         .expert-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -458,7 +639,6 @@
                 position: static;
             }
         }
-        /* ------------------------------------------- */
 
         .map-link {
             display: inline-flex;
@@ -681,7 +861,7 @@
 <body>
 
     <div class="top-bar">
-        🔥 ĐĂNG KÝ NGAY HÔM NAY – MIỄN PHÍ HỌC THỬ! | HOTLINE: 0981 473 028 - 0944 069 936
+        🔥 ĐĂNG KÝ NGAY HÔM NAY – MIỄN PHÍ HỌC THỬ KHU VỰC THANH HÀ! | HOTLINE: 0981 473 028
     </div>
 
     <header>
@@ -694,6 +874,7 @@
         </div>
         <nav>
             <ul>
+                <li><a href="#tintuc">Sự Kiện Thanh Hà</a></li>
                 <li><a href="#coso">Hệ thống sân</a></li>
                 <li><a href="#khoahoc">Khóa học</a></li>
                 <li><a href="#giaidau">Giải đấu 2026</a></li>
@@ -704,16 +885,85 @@
     </header>
 
     <section class="hero">
-        <div class="hero-badge">Chuyên nghiệp & Tận tâm</div>
-        <h2>Trung Tâm Cầu Lông Linh Đàm</h2>
-        <p>Đào tạo từ cơ bản đến nâng cao, chuyên luyện đánh giải và nâng cao trình độ. Đội ngũ HLV tận tâm, cơ sở vật chất hiện đại, lịch tập linh hoạt theo yêu cầu học viên!</p>
+        <div class="hero-badge">Đặc quyền độc quyền 15/10</div>
+        <h2>Dạy Cầu Lông Miễn Phí Tại Thanh Hà</h2>
+        <p>Chương trình đồng hành cùng học sinh khu vực Thanh Hà rèn luyện sức khỏe, phát triển kỹ năng thể thao hoàn toàn miễn phí!</p>
         <div class="hero-buttons">
-            <a href="#datlich" class="btn-main"><i class="fa-solid fa-calendar-check"></i> Đăng Ký Lịch Tập Ngay</a>
+            <a href="#tintuc" class="btn-main"><i class="fa-solid fa-gift"></i> Xem Chi Tiết & Đăng Ký</a>
             <a href="https://zalo.me/0981473028" target="_blank" class="btn-secondary"><i class="fa-solid fa-comment-dots"></i> Tư Vấn Qua Zalo</a>
         </div>
     </section>
 
     <div class="container">
+
+        <!-- ================= MỤC TIN TỨC & SỰ KIỆN THANH HÀ MỚI BỔ SUNG ================= -->
+        <div id="tintuc" class="news-section">
+            <div class="news-header">
+                <span>Tin Tức & Sự Kiện Nổi Bật</span>
+                <h3>Chuỗi Sự Kiện Dạy Cầu Lông Miễn Phí Cho Học Sinh Khu Vực Thanh Hà</h3>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-info">
+                    <h4>🏸 Cơ hội rèn luyện thể thao chuyên nghiệp không mất phí!</h4>
+                    <p>Nhằm tạo sân chơi lành mạnh, rèn luyện sức khỏe và phát triển năng khiếu thể thao cho các em học sinh, Trung tâm tổ chức chuỗi sự kiện hướng dẫn kỹ năng cầu lông cơ bản hoàn toàn miễn phí, độc quyền cho học sinh khu vực Thanh Hà.</p>
+                    
+                    <div class="news-detail-block">
+                        <h5><i class="fa-solid fa-user-check"></i> 1. Đối Tượng Áp Dụng</h5>
+                        <ul>
+                            <li>Dành riêng cho các em học sinh độ tuổi từ <strong>8 đến 18 tuổi</strong>.</li>
+                            <li>Đang sinh sống và học tập tại khu vực Thanh Hà.</li>
+                        </ul>
+                    </div>
+
+                    <div class="news-detail-block">
+                        <h5><i class="fa-solid fa-clock"></i> 2. Thời Gian & Khung Ca Học</h5>
+                        <ul>
+                            <li><strong>Ngày bắt đầu:</strong> 15/10/2026.</li>
+                            <li><strong>Ca 1:</strong> 15h30 – 17h30 chiều.</li>
+                            <li><strong>Ca 2:</strong> 18h00 – 20h00 tối.</li>
+                        </ul>
+                    </div>
+
+                    <div class="news-detail-block">
+                        <h5><i class="fa-solid fa-location-dot"></i> 3. Địa Điểm Tổ Chức</h5>
+                        <ul>
+                            <li><strong>Sân Cầu Lông LoL:</strong> Số 32, Đường Miền Đông, Thôn Thượng, Thanh Oai, Hà Nội.</li>
+                            <li>Không gian thoáng mát, thảm tiêu chuẩn, ánh sáng chống chói.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="news-images">
+                        <img src="giai1.jpg" alt="Học sinh tập cầu lông 1" class="full-img">
+                        <img src="giai3.jpg" alt="Học sinh tập cầu lông 2">
+                        <img src="chuyensau5.jpg" alt="Hoạt động trung tâm">
+                    </div>
+
+                    <!-- FORM ĐĂNG KÝ HỌC THỬ TẠI MỤC TIN TỨC -->
+                    <div class="event-booking-box">
+                        <h4>Đăng Ký Giữ Chỗ Miễn Phí</h4>
+                        <p style="font-size: 13px; margin-bottom: 12px;">Điền thông tin của con để trung tâm liên hệ sắp xếp ca học:</p>
+                        <form class="event-form" action="https://formspree.io/f/mjygkkqr" method="POST">
+                            <div>
+                                <input type="text" name="Ho_Ten_Con" placeholder="Họ và tên của con *" required>
+                            </div>
+                            <div>
+                                <input type="number" name="Do_Tuoi" placeholder="Độ tuổi của con *" required>
+                            </div>
+                            <div class="full-width">
+                                <input type="tel" name="So_Dien_Thoai_Phu_Huynh" placeholder="Số điện thoại / Zalo của phụ huynh *" required>
+                            </div>
+                            <div class="full-width">
+                                <button type="submit" class="btn-event-submit"><i class="fa-solid fa-paper-plane"></i> Gửi Đăng Ký Miễn Phí Ngay</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================= KẾT THÚC MỤC TIN TỨC & SỰ KIỆN ================= -->
 
         <div id="coso" class="section-title">
             <h3>Hệ Thống Cơ Sở Tập Luyện</h3>
@@ -955,7 +1205,7 @@
                         <option value="Lớp Nâng Cao">Lớp Nâng Cao</option>
                         <option value="Lớp Chuyên Sâu">Lớp Chuyên Sâu (HLV trưởng đứng lớp)</option>
                         <option value="Lớp Cá Nhân Hóa (1-1 đến 1-4)">Lớp Cá Nhân Hóa (1-1 đến 1-4)</option>
-                        <option value="Lớp Cá Nhân Hóa (1-1 đến 1-4)">Đăng ký miễn phí học thử</option>
+                        <option value="Đăng ký miễn phí học thử Thanh Hà">Đăng ký miễn phí học thử Thanh Hà</option>
                     </select>
                 </div>
                 
